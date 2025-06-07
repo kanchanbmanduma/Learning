@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Shade Matcher</title>
+    <link rel="icon" type="image/x-icon" href="/static/foundationTitle.ico" />
+    <link rel="stylesheet" href="/static/UserInteraction.css">
+</head>
+<body>
+    <h1>WELCOME TO INNOVATION</h1>
+    <div class="guidelines-container">
+        <h2>Guidelines to Follow:</h2>
+        <ul>
+            <li>Use a photo that is of the face straight on</li>
+            <li>Make sure nothing is obstructing the face</li>
+            <li>Make sure that the lighting is not too dim or too bright</li>
+        </ul>
+    </div>
+
+    <!-- File input placed above the canvas -->
+    <input type="file" id="upload" accept="image/*" placeholder="upload"><br>
+    
+    <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+  
+    <div>
+        <button id="area" class="part-btn">Select Area</button>
+        <button id="submit">Submit</button>
+    </div>
+   
+
+    <button id="result" class="center-button">See the result</button>
+
+    <script src="/static/main.js"></script>
+    <script src="/static/drawing.js"></script>
+    <script src="/static/floodFill.js"></script>
+    <script src="/static/extraction.js"></script>
+    <script src="/static/rgbData.js"></script>
+    <script src="/static/download.js"></script>
+</body>
+</html>

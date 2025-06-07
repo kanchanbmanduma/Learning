@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link rel="icon" type="image/x-icon" href="/static/foundationTitle.ico" />
+    <link rel="stylesheet" href="/static/final.css">
+</head>
+<body>
+    <h1>Foundation Shade Match Result</h1>
+    
+    <div id="result-container">
+        <h2>Skin Tone</h2>
+        <p id="skin-tone">{{ skin_tone }}</p>
+        
+        <h2>Foundation Shade Suggestions</h2>
+        <ul id="foundation-suggestions">
+            {% for suggestion in foundation_suggestions %}
+                <li>
+                    <div>
+                        <img src="{{ suggestion.image }}" alt="{{ suggestion.shade }}">
+                        <div>
+                            <strong>Shade:</strong> {{ suggestion.shade }}<br>
+                            <strong>Brand:</strong> {{ suggestion.brand }}
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="button-container">
+        <a href="/" class="button-home">Go back to home</a>
+    </div>
+    
+</body>
+
+
+</html>
